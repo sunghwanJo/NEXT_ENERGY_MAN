@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="area">
+		<item>10평(33.1m²) 이하</item>
+		<item>11~15평(33.2~49.6m²)</item>
+		<item>16~20평(49.7~66.1m²)</item>
+		<item>21~25평(66.2~82.6m²)</item>
+		<item>26~30평(82.7~99.2m²)</item>
+		<item>31~50평(115.8~165.3m²)</item>
+		<item>51평(165.4m²) 이상</item>			
+	</string-array>
+</resources>

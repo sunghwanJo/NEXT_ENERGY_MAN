@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/RelativeLayout1"
+    android:id="@+id/loginLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:columnCount="1" >
@@ -9,11 +9,11 @@
         android:id="@+id/checkBox1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="94dp"
+        android:layout_above="@+id/button_next"
+        android:layout_marginBottom="35dp"
         android:layout_toLeftOf="@+id/imageView1"
-        android:text="에어컨" />
-
+        android:text="에어컨" />    
+        
     <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="wrap_content"
@@ -23,57 +23,63 @@
         android:layout_toRightOf="@+id/imageView1"
         android:text="온풍기" />
 
-    <Button
-        android:id="@+id/button_next"
+    <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textView1"
+        android:layout_above="@+id/spinner_area"
+        android:layout_alignParentLeft="true"
         android:layout_marginBottom="20dp"
-        android:text="다음" />
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center"
+        android:text="당신의 효과적인 에너지 절약을 돕기 위해 필요한 정보를 입력해주세요!" />
 
-    <RadioButton
-        android:id="@+id/radioButton_middle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button_next"
-        android:layout_toLeftOf="@+id/checkBox2"
-        android:text="중" />
-
-    <RadioButton
-        android:id="@+id/radioButton_high"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button_next"
-        android:layout_alignLeft="@+id/checkBox1"
-        android:text="상" />
-
-    <RadioButton
-        android:id="@+id/radioButton_low"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button_next"
-        android:layout_alignRight="@+id/checkBox2"
-        android:text="하" />
-
-    <ImageView
+	<ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/ic_launcher" />
+	
+    <Spinner
+        android:id="@+id/spinner_income"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/spinner_type"
+        android:layout_marginTop="20dp"
+        android:prompt="@string/str_prompt_of_spinnerIncome" />
+    
+    <Spinner
+        android:id="@+id/spinner_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spinner_type"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" 
+		android:prompt="@string/str_prompt_of_spinnerArea" />
 
-    <TextView
-        android:id="@+id/textView1"
+    <Spinner
+        android:id="@+id/spinner_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:prompt="@string/str_prompt_of_spinnerArea" />
+
+    <Button
+        android:id="@+id/button_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView1"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="당신에게 효과적인 에너지 절약 방법을 알리기 위해 필요한 정보를 입력해주세요!" />
-
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_marginBottom="20dp"
+        android:text="다음" />    
+    
 </RelativeLayout>

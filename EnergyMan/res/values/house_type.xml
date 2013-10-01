@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="type">
+		<item>아파트</item>
+        <item>단독주택</item>
+        <item>연립/다세대</item>
+        <item>상가주택</item>
+	</string-array>   
+</resources>
