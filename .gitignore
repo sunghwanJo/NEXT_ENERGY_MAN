@@ -1,4 +1,5 @@
 .DS_Store
 *.apk
-EnergyMan/bin/*
-
+*/bin/*
+*/gen/org/nhnnext/energyman/R.java
+EnergyMan/bin/EnergyMan.apk
