@@ -26,20 +26,29 @@
         android:text="이웃들의 평균 사용량을 확인하고 하루에 사용하고자 하는 에너지 양을 설정해주세요!" />
 
 	<TextView
-	    android:id="@+id/textView3"
+	    android:id="@+id/textViewGoal"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:layout_below="@+id/textView1"
 	    android:layout_centerHorizontal="true"
-	    android:text="Large Text"
+	    android:text="0"
 	    android:textAppearance="?android:attr/textAppearanceLarge" />
 
 	<SeekBar
 	    android:id="@+id/seekBar1"
-	    android:layout_width="match_parent"
+	    android:max="100"
+	    android:layout_width="300dp"
 	    android:layout_height="wrap_content"
-	    android:layout_alignParentLeft="true"
-	    android:layout_below="@+id/textView3"
-	    android:layout_marginTop="88dp" />
+	    android:layout_centerHorizontal="true"
+	    android:layout_centerVertical="true" />
+
+	<Button
+	    android:id="@+id/button1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignRight="@+id/textView1"
+	    android:layout_marginBottom="20dp"
+	    android:text="다음" />
 
 </RelativeLayout>

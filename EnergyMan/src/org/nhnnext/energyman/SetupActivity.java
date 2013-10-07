@@ -72,7 +72,7 @@ public class SetupActivity extends Activity {
 				
 				@Override
 				public void onClick(View arg0) {
-					Intent intent = new Intent(getBaseContext(), MainActivity.class);
+					Intent intent = new Intent(getBaseContext(), GoalActivity.class);
 					startActivity(intent);
 					finish();
 				}
