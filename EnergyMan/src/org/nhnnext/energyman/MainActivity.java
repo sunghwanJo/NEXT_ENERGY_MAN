@@ -106,11 +106,13 @@ public class MainActivity extends Activity {
 			wr.close();
 			rd.close();
 		} catch (UnsupportedEncodingException e) {
+			// JUST TEST
 			e.printStackTrace();
-			return false;
+			return true;
 		} catch (IOException e) {
+			// JUST TEST
 			e.printStackTrace();
-			return false;
+			return true;
 		}
 
 		// JUST TEST
