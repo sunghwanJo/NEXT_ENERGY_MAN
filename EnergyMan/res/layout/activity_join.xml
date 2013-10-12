@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ABD15C"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+    
+    <EditText
+        android:id="@+id/editText_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editText_PW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText_ID"
+        android:layout_alignRight="@+id/editText_ID"
+        android:layout_below="@+id/editText_ID"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/editText_RePW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText_PW"
+        android:layout_alignRight="@+id/editText_PW"
+        android:layout_below="@+id/editText_PW"
+        android:ems="10"
+        android:hint="repeat password"
+        android:inputType="textPassword" >
+    </EditText>
+
+    <Button
+        android:id="@+id/button_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText_RePW"
+        android:layout_alignRight="@+id/editText_RePW"
+        android:layout_below="@+id/editText_RePW"
+        android:layout_margin="5dp"
+        android:background="#3C8885"
+        android:text="Join"
+        android:textColor="#ABD15C" />
+
+</RelativeLayout>
