@@ -65,9 +65,9 @@
 	    android:layout_alignRight="@+id/button_login"
 	    android:layout_below="@+id/button_signin"
 	    android:layout_margin="5dp"
-	    android:background="#55B550"
 	    android:text="Forget password"
 	    android:textSize="12dp"
+	    android:background="#55B550"
 	    android:textColor="#ABD15C" />
 	    
 </RelativeLayout>

@@ -2,84 +2,172 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/loginLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:columnCount="1" >
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/spinner_area"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:gravity="center"
-        android:text="당신의 효과적인 에너지 절약을 돕기 위해 필요한 정보를 입력해주세요!" />
-
-	<ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/ic_launcher" />
+        android:layout_marginTop="30dp"
+        android:background="#E7E683"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageView1"
+            android:text="당신의 효과적인 에너지 절약을 돕기 위해 필요한 정보를 입력해주세요!" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+            	
+                <TextView
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="주택 형태" 
+                    android:textColor="#3C8885" >                       
+                </TextView>            
+            
+	            <Spinner
+	                android:id="@+id/spinner_type"
+	                android:layout_width="fill_parent"                
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/str_prompt_of_spinnerType" />
+			</LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+	                        	
+                <TextView
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="주택 넓이" 
+                    android:textColor="#3C8885" >
+				</TextView>            
+            	            
+	            <Spinner
+	                android:id="@+id/spinner_area"
+					android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:prompt="@string/str_prompt_of_spinnerArea" />
+			</LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:weightSum="1" >
+			
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+            	
+                <TextView
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="소득수준" 
+                    android:textColor="#3C8885" >
+                </TextView>
+                
+	            <Spinner
+	                android:id="@+id/spinner_income"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+	                android:prompt="@string/str_prompt_of_spinnerIncome" />
+
+	        </LinearLayout>
+	            
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+				<TextView
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="가전제품 보유 여부"
+                    android:textColor="#3C8885" >     
+                </TextView>
+                
+				<LinearLayout
+	                android:id="@+id/linearLayout7"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal"
+	                android:weightSum="1" >
+
+				    <CheckBox
+	                    android:id="@+id/checkBox1"
+	                    android:layout_width="0dp"
+	                    android:layout_height="wrap_content"
+	                    android:layout_weight="0.5"
+	                    android:text="에어컨" />
 	
-    <Spinner
-        android:id="@+id/spinner_income"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/spinner_type"
-        android:layout_marginTop="20dp"
-        android:prompt="@string/str_prompt_of_spinnerIncome" />
-    
-    <Spinner
-        android:id="@+id/spinner_area"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/spinner_type"
-        android:layout_alignParentLeft="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp" 
-		android:prompt="@string/str_prompt_of_spinnerArea" />
+	                <CheckBox
+	                    android:id="@+id/checkBox2"
+	                    android:layout_width="0dp"
+	                    android:layout_height="wrap_content"
+	                    android:layout_weight="0.5"
+	                    android:text="온풍기" />
+				</LinearLayout>
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
 
-    <Spinner
-        android:id="@+id/spinner_type"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:prompt="@string/str_prompt_of_spinnerArea" />
-
-    <CheckBox
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button_next"
-        android:layout_marginBottom="35dp"
-        android:layout_toLeftOf="@+id/imageView1"
-        android:text="에어컨" />    
-        
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/checkBox1"
-        android:layout_alignBottom="@+id/checkBox1"
-        android:layout_toRightOf="@+id/imageView1"
-        android:text="온풍기" />
-    
     <Button
         android:id="@+id/button_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textView1"
+        android:layout_alignRight="@+id/linearLayout1"
         android:layout_marginBottom="30dp"
-        android:text="다음" />    
-       
+        android:background="#3C8885"
+        android:textColor="#ABD15C" 
+        android:text="다음" />
+
 </RelativeLayout>

@@ -5,50 +5,134 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/ic_launcher" />    
-        
-	<TextView
-        android:id="@+id/textView1"
+        android:layout_marginTop="30dp"
+        android:background="#E7E683"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageView1"
+            android:text="이웃들의 평균 사용량을 확인하고 하루에 사용하고자 하는 에너지 양을 설정해주세요!" />
+
+    </RelativeLayout>
+
+ 	<TableLayout
+ 	    android:id="@+id/tableLayout1"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignParentLeft="true"
+ 	    android:layout_below="@+id/linearLayout1"
+ 	    android:layout_marginTop="30dp" >
+
+ 	    <TableRow
+ 	        android:layout_width="wrap_content"
+ 	        android:layout_height="wrap_content"
+ 	        android:weightSum="1" >
+
+ 	        <LinearLayout
+ 	            android:id="@+id/linearLayout3"
+ 	            android:layout_width="0dp"
+ 	            android:layout_height="wrap_content"
+ 	            android:layout_weight="0.5"
+ 	            android:orientation="vertical" >
+
+ 	            <TextView
+ 	                android:id="@+id/textNeibor"
+ 	                android:layout_width="fill_parent"
+ 	                android:layout_height="wrap_content"
+ 	                android:layout_margin="10dp"
+ 	                android:gravity="center"
+ 	                android:padding="10dp"
+ 	                android:text="비슷한 환경의 이웃이 매일 사용하는 전기량"
+ 	                android:textColor="#3C8885" />
+
+ 	            <TextView
+ 	                android:id="@+id/textNeiborEnergy"
+ 	                android:layout_width="fill_parent"
+ 	                android:layout_height="wrap_content"
+ 	                android:gravity="center"
+ 	                android:text="10kWh"
+ 	                android:textColor="#3C8885"
+ 	                android:textSize="42sp" />
+ 	        </LinearLayout>
+
+ 	        <LinearLayout
+ 	            android:id="@+id/linearLayout33"
+ 	            android:layout_width="0dp"
+ 	            android:layout_height="wrap_content"
+ 	            android:layout_weight="0.5"
+ 	            android:orientation="vertical" >
+
+ 	            <TextView
+ 	                android:id="@+id/textViewGoal1"
+ 	                android:layout_width="fill_parent"
+ 	                android:layout_height="wrap_content"
+ 	                android:layout_margin="10dp"
+ 	                android:gravity="center"
+ 	                android:padding="10dp"
+ 	                android:text="당신이 매일 쓰고자 하는 목표 사용 전기량"
+ 	                android:textColor="#000000" />
+
+ 	            <TextView
+ 	                android:id="@+id/textViewGoal"
+ 	                android:layout_width="fill_parent"
+ 	                android:layout_height="wrap_content"
+ 	                android:gravity="center"
+ 	                android:text="0kWh"
+ 	                android:textColor="#000000"
+ 	                android:textSize="42sp" />
+ 	        </LinearLayout>
+ 	    </TableRow>
+ 	</TableLayout>
+
+ 	<Button
+        android:id="@+id/buttonNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/seekBar1"
+        android:layout_marginBottom="30dp"
+        android:background="#3C8885"
+        android:text="다음"
+        android:textColor="#ABD15C" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableLayout1"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="이웃들의 평균 사용량을 확인하고 하루에 사용하고자 하는 에너지 양을 설정해주세요!" />
-
-	<TextView
-	    android:id="@+id/textViewGoal"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_below="@+id/textView1"
-	    android:layout_centerHorizontal="true"
-	    android:text="-50%"
-	    android:textAppearance="?android:attr/textAppearanceLarge" />
-
-	<SeekBar
-	    android:id="@+id/seekBar1"
-	    android:max="100"
-	    android:layout_width="300dp"
-	    android:layout_height="wrap_content"
-	    android:layout_centerHorizontal="true"
-	    android:layout_centerVertical="true" />
-
-	<Button
-	    android:id="@+id/buttonNext"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentBottom="true"
-	    android:layout_alignRight="@+id/textView1"
-	    android:layout_marginBottom="30dp"
-	    android:text="다음" />
+        android:layout_marginTop="10dp"
+        android:max="10" />
+ 
+   	<TextView
+ 	    android:id="@+id/textViewPercent"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_below="@+id/seekBar1"
+ 	    android:layout_centerHorizontal="true"
+ 	    android:layout_marginTop="15dp"
+ 	    android:text="당신은 이웃보다 10%의 전기를 절약합니다"
+ 	    android:textColor="#3C8885" />
 
 </RelativeLayout>
