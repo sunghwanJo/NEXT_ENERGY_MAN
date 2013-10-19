@@ -32,42 +32,28 @@
         android:hint="password"
         android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/button_login"
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/editText_RePW"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editText_PW"
         android:layout_alignRight="@+id/editText_PW"
         android:layout_below="@+id/editText_PW"
+        android:ems="10"
+        android:hint="repeat password"
+        android:inputType="textPassword" >
+    </EditText>
+
+    <Button
+        android:id="@+id/button_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText_RePW"
+        android:layout_alignRight="@+id/editText_RePW"
+        android:layout_below="@+id/editText_RePW"
+        android:layout_margin="5dp"
         android:background="#3C8885"
-        android:textColor="#ABD15C"
-        android:text="Login"
-        android:layout_margin="5dp" />
+        android:text="Join"
+        android:textColor="#ABD15C" />
 
-	<Button
-	    android:id="@+id/button_signin"
-	    android:layout_width="wrap_content"
-	    android:layout_height="30dp"
-	    android:layout_alignLeft="@+id/button_login"
-	    android:layout_alignRight="@+id/button_login"
-	    android:layout_below="@+id/button_login"
-	    android:layout_margin="5dp"
-	    android:background="#55B550"
-	    android:text="Sign in"
-	    android:textSize="12dp"
-	    android:textColor="#ABD15C" />
-
-	<Button
-	    android:id="@+id/button_find"
-	    android:layout_width="wrap_content"
-	    android:layout_height="30dp"
-	    android:layout_alignLeft="@+id/button_login"
-	    android:layout_alignRight="@+id/button_login"
-	    android:layout_below="@+id/button_signin"
-	    android:layout_margin="5dp"
-	    android:background="#55B550"
-	    android:text="Forget password"
-	    android:textSize="12dp"
-	    android:textColor="#ABD15C" />
-	    
 </RelativeLayout>
