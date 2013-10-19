@@ -35,15 +35,27 @@ public class MainActivity extends Activity {
 
 		final String userEmail = prefs.getString("userEmail", null);
 		final String userPassword = prefs.getString("userPassword", null);
-		
+
 		if (userEmail == null && userPassword == null) {
 		//기존에 로그인 기록이 없다면 로그인 화면을 보여줌
 			setContentView(R.layout.activity_login);
 
 			Button loginButton = (Button) findViewById(R.id.button_login);
+			Button joinButton = (Button)findViewById(R.id.button_join);
 			final EditText editTextID = (EditText) findViewById(R.id.editText_ID);
 			final EditText editTextPW = (EditText) findViewById(R.id.editText_PW);
-
+			
+			joinButton.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View arg0) {
+					Intent intent = new Intent(getBaseContext(), JoinActivity.class);
+					startActivity(intent);
+					finish();
+					
+				}
+			});
+			
 			loginButton.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View arg0) {
