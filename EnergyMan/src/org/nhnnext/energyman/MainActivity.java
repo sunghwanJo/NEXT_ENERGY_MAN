@@ -25,7 +25,6 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 
 	private final String LOGIN_SERVER_URL = "http://0.0.0.0:80/checkLogin/";
-	public static final String PREFS_NAME = "prefs";
 	SharedPreferences prefs;
 
 	@Override
@@ -41,7 +40,6 @@ public class MainActivity extends Activity {
 		//기존에 로그인 기록이 없다면 로그인 화면을 보여줌
 			setContentView(R.layout.activity_login);
 
-			
 			Button loginButton = (Button) findViewById(R.id.button_login);
 			final EditText editTextID = (EditText) findViewById(R.id.editText_ID);
 			final EditText editTextPW = (EditText) findViewById(R.id.editText_PW);
@@ -49,10 +47,15 @@ public class MainActivity extends Activity {
 			loginButton.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View arg0) {
+					String email = editTextID.getText().toString();
+					String password =  editTextPW.getText().toString();
 					
-					if (checkLogin(editTextID.getText().toString(), editTextPW.getText().toString())) {
+					if (checkLogin(email, password)) {
 						Toast.makeText(MainActivity.this, "Login Success",
 								Toast.LENGTH_SHORT).show();
+						prefs.edit().putString("userEmail", email);
+						prefs.edit().putString("userPassword", password);
+						
 						Intent intent = new Intent(getBaseContext(),
 								SetupActivity.class);
 						startActivity(intent);
