@@ -1,15 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/loginLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
 
-    <ProgressBar
-        android:id="@+id/progressBar1"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="155dp" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/loginLayout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" 
+	android:weightSum="3" >
     
-</RelativeLayout>    
+    <LinearLayout
+	    android:id="@+id/characterLayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp" 
+	    android:layout_weight="1"
+	    android:orientation="horizontal"
+	    android:weightSum="3"
+	    android:background="#FFFFFF" >
+	    
+        <ImageView
+            android:id="@+id/characterImage"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/energyman" />
+        
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="2"
+            android:padding="10dp" >
+        	
+        	<ImageView 
+        	    android:layout_width="fill_parent"
+        	    android:layout_height="fill_parent"
+        	    android:src="@drawable/textbox" />
+                
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+</RelativeLayout>	 
+                     	             
+    </LinearLayout>
+
+    <RelativeLayout 
+	    android:id="@+id/graphLayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp" 
+	    android:layout_weight="1"
+	    android:background="#3C8885" >             
+    </RelativeLayout>
+    
+    <RelativeLayout 
+	    android:id="@+id/numberLayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp" 
+	    android:layout_weight="1"
+	    android:background="#55B550" >	             
+    </RelativeLayout>
+    
+</LinearLayout>
