@@ -41,11 +41,11 @@ public class MainActivity extends Activity {
 			setContentView(R.layout.activity_login);
 
 			Button loginButton = (Button) findViewById(R.id.button_login);
-			Button joinButton = (Button)findViewById(R.id.button_join);
+			Button signinButton = (Button)findViewById(R.id.button_signin);
 			final EditText editTextID = (EditText) findViewById(R.id.editText_ID);
 			final EditText editTextPW = (EditText) findViewById(R.id.editText_PW);
 			
-			joinButton.setOnClickListener(new OnClickListener() {
+			signinButton.setOnClickListener(new OnClickListener() {
 				
 				@Override
 				public void onClick(View arg0) {

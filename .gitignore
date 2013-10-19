@@ -1,6 +1,11 @@
 #glt application files
 *.apk
 *.ap_
+*.DS_Store
+EnergyMan/bin/classes.dex
+EnergyMan/bin/EnergyMan.apk
+EnergyMan/bin/classes.dex
+EnergyMan/src/org/nhnnext/energyman/MainActivity.java
 
 # files for the dex VM
 *.dex
@@ -29,7 +34,6 @@ proguard/
 *.ipr
 *.iws
 .idea/
-.DS_Store
 *.apk
-*/bin/*
-*/gen/org/nhnnext/energyman/R.java
+*/bin/
+*/gen/
