@@ -26,7 +26,7 @@ public class GoalActivity extends Activity {
 		
 			@Override
 			public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
-				goalText.setText(arg1 - 50 + "%");
+				goalText.setText(arg1 + "kWh");
 			}
 
 			@Override

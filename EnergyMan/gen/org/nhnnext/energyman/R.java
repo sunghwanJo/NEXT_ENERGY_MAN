@@ -26,31 +26,47 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int energyman=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int textbox=0x7f020002;
     }
     public static final class id {
-        public static final int action_forgot_password=0x7f090015;
-        public static final int action_settings=0x7f090014;
-        public static final int buttonNext=0x7f090005;
-        public static final int button_find=0x7f09000d;
-        public static final int button_join=0x7f09000a;
-        public static final int button_login=0x7f09000b;
-        public static final int button_next=0x7f090012;
-        public static final int button_signin=0x7f09000c;
-        public static final int checkBox1=0x7f090011;
-        public static final int checkBox2=0x7f090013;
-        public static final int editText_ID=0x7f090007;
-        public static final int editText_PW=0x7f090008;
-        public static final int editText_RePW=0x7f090009;
-        public static final int imageView1=0x7f090001;
-        public static final int listInfo=0x7f090006;
+        public static final int action_forgot_password=0x7f090023;
+        public static final int action_settings=0x7f090022;
+        public static final int buttonNext=0x7f09000b;
+        public static final int button_find=0x7f090017;
+        public static final int button_join=0x7f090014;
+        public static final int button_login=0x7f090015;
+        public static final int button_next=0x7f090021;
+        public static final int button_signin=0x7f090016;
+        public static final int characterLayout=0x7f09000e;
+        public static final int checkBox1=0x7f09001f;
+        public static final int checkBox2=0x7f090020;
+        public static final int editText_ID=0x7f090011;
+        public static final int editText_PW=0x7f090012;
+        public static final int editText_RePW=0x7f090013;
+        public static final int graphLayout=0x7f09000f;
+        public static final int imageView1=0x7f090002;
+        public static final int linearLayout1=0x7f090001;
+        public static final int linearLayout2=0x7f09001d;
+        public static final int linearLayout3=0x7f090005;
+        public static final int linearLayout33=0x7f090008;
+        public static final int linearLayout4=0x7f090018;
+        public static final int linearLayout5=0x7f09001b;
+        public static final int linearLayout7=0x7f09001e;
         public static final int loginLayout=0x7f090000;
-        public static final int seekBar1=0x7f090004;
-        public static final int spinner_area=0x7f09000e;
-        public static final int spinner_income=0x7f09000f;
-        public static final int spinner_type=0x7f090010;
-        public static final int textView1=0x7f090002;
-        public static final int textViewGoal=0x7f090003;
+        public static final int numberLayout=0x7f090010;
+        public static final int seekBar1=0x7f09000c;
+        public static final int spinner_area=0x7f09001a;
+        public static final int spinner_income=0x7f09001c;
+        public static final int spinner_type=0x7f090019;
+        public static final int tableLayout1=0x7f090004;
+        public static final int textNeibor=0x7f090006;
+        public static final int textNeiborEnergy=0x7f090007;
+        public static final int textView1=0x7f090003;
+        public static final int textViewGoal=0x7f09000a;
+        public static final int textViewGoal1=0x7f090009;
+        public static final int textViewPercent=0x7f09000d;
     }
     public static final class layout {
         public static final int acivity_goal=0x7f030000;
@@ -58,8 +74,6 @@ public final class R {
         public static final int activity_join=0x7f030002;
         public static final int activity_login=0x7f030003;
         public static final int activity_setup=0x7f030004;
-        public static final int list_item=0x7f030005;
-        public static final int main_item=0x7f030006;
     }
     public static final class menu {
         public static final int info=0x7f080000;
